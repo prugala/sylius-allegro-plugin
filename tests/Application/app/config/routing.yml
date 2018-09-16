@@ -1,0 +1,14 @@
+sylius:
+    resource: "../../../../vendor/sylius/sylius/app/config/routing.yml"
+
+# Put your own routes here
+
+prugala_sylius_allegro_plugin_shop:
+    resource: "@PrugalaSyliusAllegroPlugin/Resources/config/shop_routing.yml"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+
+prugala_sylius_allegro_plugin_admin:
+    resource: "@PrugalaSyliusAllegroPlugin/Resources/config/admin_routing.yml"
+    prefix: /admin
