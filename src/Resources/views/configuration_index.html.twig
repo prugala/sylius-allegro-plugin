@@ -1,0 +1,27 @@
+{% extends 'SyliusAdminBundle::layout.html.twig' %}
+
+{% import '@SyliusUi/Macro/messages.html.twig' as messages %}
+
+{% block content %}
+    <div class="ui stackable grid">
+        {#{% if last_error %}#}
+            {#{{ messages.error(last_error.messageKey|trans(last_error.messageData, 'security')) }}#}
+        {#{% endif %}#}
+
+        <h1>
+            {{ 'prugala.allegro.header'|trans }}
+        </h1>
+
+        <form class="ui segment" action="{{ path('prugala_sylius_allegro_configuration_save') }}" method="post" novalidate>
+            <div class="field">
+                {{ form_row(form.appId) }}
+            </div>
+            <div class="field">
+                {{ form_row(form.appSecret) }}
+            </div>
+            <div class="field">
+                <button type="submit" class="ui fluid large primary submit button">{{ 'sylius.ui.save'|trans }}</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
