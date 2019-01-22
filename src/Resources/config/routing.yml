@@ -1,0 +1,9 @@
+prugala_sylius_allegro_configuration:
+    path: /allegro/configuration
+    defaults:
+        _controller: PrugalaSyliusAllegroPlugin:Configuration:index
+
+prugala_sylius_allegro_configuration_save:
+    path: /allegro/configuration/save
+    defaults:
+        _controller: PrugalaSyliusAllegroPlugin:Configuration:save
